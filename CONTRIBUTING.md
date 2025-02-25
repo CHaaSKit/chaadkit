@@ -6,13 +6,11 @@
 - Implement performance improvements
 - Refine documentation
 - Suggest new features and design improvements
-- Link to your SaaSKit-related project
+- Link to your ChaaSKit-related project
 
 ## Creating an Issue
 
 - Make sure that an issue doesn't already exist (avoid duplicates)
-- Feel free to ask questions in the
-  [#saaskit Discord channel](https://discord.com/channels/684898665143206084/712010403302866974)
 
 ## Submitting a Pull Request
 

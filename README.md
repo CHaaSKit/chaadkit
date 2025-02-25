@@ -1,15 +1,14 @@
-# Deno SaaSKit
+# CHaaSKit: Deno Fresh
 
-[![Discord Chat](https://img.shields.io/discord/684898665143206084?logo=discord&style=social)](https://discord.gg/deno)
-[![CI](https://github.com/denoland/saaskit/actions/workflows/ci.yml/badge.svg)](https://github.com/denoland/saaskit/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/denoland/saaskit/branch/main/graph/badge.svg?token=77F8TYTP13)](https://codecov.io/gh/denoland/saaskit)
+**An open-sourced and highly performant template for building your CHaaS (Chat
+As A Service) quickly and easily.**
+
 [![Built with the Deno Standard Library](https://raw.githubusercontent.com/denoland/deno_std/main/badge.svg)](https://deno.land/std)
 
-[Deno SaaSKit](https://deno.com/saaskit) is an open-sourced, highly performant
-template for building your SaaS quickly and easily.
+Forked from: [Deno SaaSKit](https://deno.com/saaskit)
 
-> Note: this project is in beta. Design, workflows, and user accounts are
-> subject to change.
+> Note: this project is in ALPHA. Everything is broken and everything might
+> change.
 
 ## Features
 
@@ -42,8 +41,8 @@ To get started:
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/denoland/saaskit.git
-   cd saaskit
+   git clone https://github.com/chaaskit/deno-fresh-chaaskit.git
+   cd deno-fresh-chaaskit
    ```
 1. Create a new `.env` file.
 1. Navigate to GitHub's
@@ -172,8 +171,8 @@ See other examples of blog post files in [/posts](/posts).
 
 ### Themes
 
-You can customize theme options such as spacing, color, etc. By default, Deno
-SaaSKit comes with `primary` and `secondary` colors predefined within
+You can customize theme options such as spacing, color, etc. By default,
+CHaaSKit comes with `primary` and `secondary` colors predefined within
 `tailwind.config.ts`. Change these values to match your desired color scheme.
 
 ### Cover Image
@@ -198,18 +197,18 @@ This section assumes that a
 
 ### Deploy to [Deno Deploy](https://deno.com/deploy)
 
-1. Clone this repository for your SaaSKit project.
-1. Update your `.github/workflows/deploy.yml` file as needed. Hints are in the
+1. Clone this repository for your project.
+2. Update your `.github/workflows/deploy.yml` file as needed. Hints are in the
    file.
-1. Sign into [Deno Deploy](https://dash.deno.com/projects) with your GitHub
+3. Sign into [Deno Deploy](https://dash.deno.com/projects) with your GitHub
    account.
-1. Click **+ New Project**.
-1. Select your GitHub organization or user, repository, and branch.
-1. Click **Edit mode** and select **Build step with GitHub Actions** as the
+4. Click **+ New Project**.
+5. Select your GitHub organization or user, repository, and branch.
+6. Click **Edit mode** and select **Build step with GitHub Actions** as the
    build mode and `main.ts` as the entry point.
-1. Click **Add Build Step** and wait until the GitHub Actions Workflow is
+7. Click **Add Build Step** and wait until the GitHub Actions Workflow is
    complete.
-1. Once the deployment is complete, click on **Settings** and add the production
+8. Once the deployment is complete, click on **Settings** and add the production
    environmental variables, then hit **Save**.
 
 You should now be able to visit your newly deployed SaaS website.
@@ -282,203 +281,3 @@ Analytics.
 
 > Note: it is not recommended to set this locally, otherwise your tests and
 > debugging requests will be logged.
-
-## REST API Reference
-
-### `GET /api/items`
-
-Get all items in chronological order. Add `?cursor=<cursor>` URL parameter for
-pagination. Limited to 10 items per page.
-
-Example 1:
-
-```jsonc
-// https://hunt.deno.land/api/items
-{
-  "values": [
-    {
-      "id": "01HAY7A4ZD737BHJKXW20H59NH",
-      "userLogin": "Deniswarui4",
-      "title": "czxdczs",
-      "url": "https://wamufx.co.ke/",
-      "score": 0
-    },
-    {
-      "id": "01HAD9KYMCC5RS2FNPQBMYFRSK",
-      "userLogin": "jlucaso1",
-      "title": "Ok",
-      "url": "https://github.com/jlucaso1/crunchyroll-quasar",
-      "score": 0
-    },
-    {
-      "id": "01HA7YJJ2T66MSEP78NAG8910A",
-      "userLogin": "BrunoBernardino",
-      "title": "LockDB: Handle process/event locking",
-      "url": "https://lockdb.com",
-      "score": 2
-    }
-    // 7 more items...
-  ],
-  "cursor": "AjAxSDdUNTBBUkY0QzhEUjRXWjkyVDJZSFhZAA=="
-}
-```
-
-Example 2 (using `cursor` field from page 1):
-
-```jsonc
-// https://hunt.deno.land/api/items?cursor=AjAxSDdUNTBBUkY0QzhEUjRXWjkyVDJZSFhZAA==
-{
-  "values": [
-    {
-      "id": "01H777YG17VY8HANDHE84ZXKGW",
-      "userLogin": "BrunoBernardino",
-      "url": "https://asksoph.com",
-      "title": "Ask Soph about a dead philosopher",
-      "score": 2
-    },
-    {
-      "id": "01H6RG2V3AV82FJA2VY6NJD9EP",
-      "userLogin": "retraigo",
-      "url": "https://github.com/retraigo/appraisal",
-      "title": "Appraisal: Feature Extraction, Feature Conversion in TypeScript",
-      "score": 0
-    },
-    {
-      "id": "01H64TZ3TNKFWS35MJ9PSGNWE1",
-      "userLogin": "lambtron",
-      "url": "https://www.zaynetro.com/post/2023-how-deno-works",
-      "title": "How Deno works (blog post)",
-      "score": 2
-    }
-    // 7 more items...
-  ],
-  "cursor": "AjAxSDJUSlBYWUJRM1g0OEo2UlIzSFgyQUQ0AA=="
-}
-```
-
-### `GET /api/items/:id`
-
-Get the item with the given ID.
-
-Example:
-
-```jsonc
-// https://hunt.deno.land/api/items/01H5379J1VZ7EB54KSCSQSCRJC
-{
-  "id": "01H5379J1VZ7EB54KSCSQSCRJC",
-  "userLogin": "lambtron",
-  "url": "https://github.com/Savory/saaskit-danet",
-  "title": "saaskit-danet: a modern SaaS template built for Fresh for SSR and Danet for the API",
-  "score": 10
-}
-```
-
-### `GET /api/users`
-
-Get all users in alphabetical order by GitHub login. Add `?cursor=<cursor>` URL
-parameter for pagination. Limited to 10 users per page.
-
-Example 1:
-
-```jsonc
-// https://hunt.deno.land/api/users
-{
-  "values": [
-    {
-      "login": "51chengxu",
-      "sessionId": "9a6745a1-3a46-45c8-a265-c7469ff73678",
-      "isSubscribed": false,
-      "stripeCustomerId": "cus_OgWU0R42bolJtm"
-    },
-    {
-      "login": "AiridasSal",
-      "sessionId": "adb25cac-9be7-494f-864b-8f05b80f7168",
-      "isSubscribed": false,
-      "stripeCustomerId": "cus_OcJW6TadIjjjT5"
-    },
-    {
-      "login": "ArkhamCookie",
-      "stripeCustomerId": "cus_ObVcWCSYwYOnWS",
-      "sessionId": "fd8e7aec-2701-44ae-925b-25e17ff288c4",
-      "isSubscribed": false
-    }
-    // 7 more users...
-  ],
-  "cursor": "AkVob3ItZGV2ZWxvcGVyAA=="
-}
-```
-
-Example 2 (using `cursor` field from page 1):
-
-```jsonc
-// https://hunt.deno.land/api/users?cursor=AkVob3ItZGV2ZWxvcGVyAA==
-{
-  "values": [
-    {
-      "login": "EthanThatOneKid",
-      "sessionId": "ae7425c1-7932-412a-9956-e456787d557f",
-      "isSubscribed": false,
-      "stripeCustomerId": "cus_OeYA2oTJRlZBIA"
-    },
-    {
-      "login": "Fleury99",
-      "sessionId": "2e4920a3-f386-43e1-8c0d-61b5e0edfc0d",
-      "isSubscribed": false,
-      "stripeCustomerId": "cus_OcOUJAYmyxZlDR"
-    },
-    {
-      "login": "FriendlyUser",
-      "stripeCustomerId": "cus_ObLbqu5gxp0qnl",
-      "sessionId": "508ff291-7d1c-4a67-b19f-447ad73b5914",
-      "isSubscribed": false
-    }
-    // 7 more users...
-  ],
-  "cursor": "Ak5ld1lhbmtvAA=="
-}
-```
-
-### `GET /api/users/:login`
-
-Get the user with the given GitHub login.
-
-Example:
-
-```jsonc
-// https://hunt.deno.land/api/users/hashrock
-{
-  "login": "hashrock",
-  "stripeCustomerId": "cus_ObqbLXkRtsKy70",
-  "sessionId": "97eec97a-6636-485e-9b14-253bfa3ce1de",
-  "isSubscribed": true
-}
-```
-
-## Goals and Philosophy
-
-For the user, the website should be fast, secure and have a design with clear
-intent. Additionally, the HTML should be well-structured and indexable by search
-engines. The defining metrics for these goals are:
-
-- A perfect [PageSpeed Insights](https://pagespeed.web.dev/) score.
-- Fully valid HTML, as measured by
-  [W3C's Markup Validation Service](https://validator.w3.org/).
-
-For the developer, the codebase should minimize the steps and amount of time
-required to get up and running. From there, customization and extension of the
-web app should be simple. The characteristics of a well-written codebase also
-apply, such as:
-
-- Easy to understand
-- Modular functionality
-- Clearly defined behavior with validation through tests
-
-## Community and Resources
-
-Join [the `#saaskit` channel in Deno's Discord](https://discord.gg/deno) to meet
-other SaaSKit developers, ask questions, and get unblocked.
-
-Here's a list of articles, how to guides, and videos about SaaSKit:
-
-- [Announcing Deno SaaSKit](https://deno.com/blog/announcing-deno-saaskit)
-- [Getting Started with SaaSKit (video walkthrough)](https://www.youtube.com/watch?v=1GYs3NbVCfE)

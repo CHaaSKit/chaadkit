@@ -59,7 +59,7 @@ export default function Footer() {
         <a
           href="https://github.com/CHaaSKit/deno-fresh-chaaskit"
           target="_blank"
-          aria-label="Deno SaaSKit repo on GitHub"
+          aria-label="CHaaSKit repo on GitHub"
           class="link-styles"
         >
           <IconBrandGithub class="size-6" />

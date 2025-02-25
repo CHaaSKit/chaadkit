@@ -160,7 +160,7 @@ export default defineRoute<State>(async (_req, ctx) => {
 
   if (data.length === 0) {
     throw new Error(
-      "No Stripe products have been found. Please see https://github.com/chaaskit/deno-fresh-chaaskit#set-up-stripe-optional to set up Stripe locally and create a Stripe product."
+      "No Stripe products have been found. Please see https://github.com/CHaaDKit/deno-fresh-CHaaDKit#set-up-stripe-optional to set up Stripe locally and create a Stripe product."
     )
   }
 

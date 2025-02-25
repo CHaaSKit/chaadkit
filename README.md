@@ -41,8 +41,8 @@ To get started:
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/chaaskit/deno-fresh-chaaskit.git
-   cd deno-fresh-chaaskit
+   git clone https://github.com/chaaskit/chaadkit.git
+   cd chaadkit
    ```
 1. Create a new `.env` file.
 1. Navigate to GitHub's

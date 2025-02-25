@@ -6,7 +6,7 @@
 - Implement performance improvements
 - Refine documentation
 - Suggest new features and design improvements
-- Link to your ChaaSKit-related project
+- Link to your ChaaDKit-related project
 
 ## Creating an Issue
 

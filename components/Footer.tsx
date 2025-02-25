@@ -51,15 +51,15 @@ export default function Footer() {
         <a
           href="https://discord.gg/https://discord.gg/42hFKgw5KE"
           target="_blank"
-          aria-label="CHaaSKit on Discord"
+          aria-label="CHaaDKit on Discord"
           class="link-styles"
         >
           <IconBrandDiscord class="size-6" />
         </a>
         <a
-          href="https://github.com/CHaaSKit/deno-fresh-chaaskit"
+          href="https://github.com/CHaaDKit/deno-fresh-CHaaDKit"
           target="_blank"
-          aria-label="CHaaSKit repo on GitHub"
+          aria-label="CHaaDKit repo on GitHub"
           class="link-styles"
         >
           <IconBrandGithub class="size-6" />

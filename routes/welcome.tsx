@@ -1,7 +1,7 @@
 // Copyright 2023-2025 the Deno authors. All rights reserved. MIT license.
-import { defineRoute } from "$fresh/src/server/defines.ts";
-import Head from "@/components/Head.tsx";
-import { isGitHubSetup } from "@/utils/github.ts";
+import { defineRoute } from "$fresh/src/server/defines.ts"
+import Head from "@/components/Head.tsx"
+import { isGitHubSetup } from "@/utils/github.ts"
 
 function SetupInstruction() {
   return (
@@ -15,7 +15,7 @@ function SetupInstruction() {
 
       <p>
         <a
-          href="https://github.com/denoland/saaskit#get-started-locally"
+          href="https://github.com/chaaskit/deno-fresh-chaaskit#get-started-locally"
           class="inline-flex gap-2 text-green-600 dark:text-green-400 hover:underline cursor-pointer"
         >
           Get started locally guide &#8250;
@@ -23,7 +23,7 @@ function SetupInstruction() {
       </p>
       <p>
         <a
-          href="https://github.com/denoland/saaskit#deploy-to-production"
+          href="https://github.com/chaaskit/deno-fresh-chaaskit#deploy-to-production"
           class="inline-flex gap-2 text-green-600 dark:text-green-400 hover:underline cursor-pointer"
         >
           Deploy to production guide &#8250;
@@ -42,7 +42,7 @@ function SetupInstruction() {
         , this message will disappear.
       </p>
     </div>
-  );
+  )
 }
 
 export default defineRoute((_req, ctx) => {
@@ -53,5 +53,5 @@ export default defineRoute((_req, ctx) => {
         {!isGitHubSetup() && <SetupInstruction />}
       </main>
     </>
-  );
-});
+  )
+})

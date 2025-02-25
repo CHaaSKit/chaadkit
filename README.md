@@ -1,14 +1,14 @@
 # CHaaSKit: Deno Fresh
 
+> [!WARNING]\
+> this project is in ALPHA. Everything is broken and everything might change!
+
 **An open-sourced and highly performant template for building your CHaaS (Chat
 As A Service) quickly and easily.**
 
 [![Built with the Deno Standard Library](https://raw.githubusercontent.com/denoland/deno_std/main/badge.svg)](https://deno.land/std)
 
 Forked from: [Deno SaaSKit](https://deno.com/saaskit)
-
-> Note: this project is in ALPHA. Everything is broken and everything might
-> change.
 
 ## Features
 

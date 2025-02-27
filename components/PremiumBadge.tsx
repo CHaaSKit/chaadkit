@@ -13,9 +13,7 @@ export function PremiumBadge(props: PremiumBadgeProps) {
       viewBox={"0 0 30 30"}
       {...props}
     >
-      <title>
-        Deno Hunt premium user
-      </title>
+      <title>CHaaDKit premium user</title>
       <g clip-path="url(#prefix__clip0_802_86)">
         <path
           d="M15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0z"

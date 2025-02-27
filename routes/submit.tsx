@@ -70,7 +70,7 @@ export default defineRoute<State>((_req, ctx) => {
               <IconCheckCircle class="inline-block mr-2" />
               <strong>Do</strong> include a description with your title.
               <div class="text-sm text-gray-500">
-                E.g. “Deno Hunt: the best place to share your Deno project”
+                E.g. CHaaDKit: the best place to share your Deno project”
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default defineRoute<State>((_req, ctx) => {
                 type="text"
                 name="title"
                 required
-                placeholder="Deno Hunt: the best place to share your Deno project"
+                placeholder="CHaaDKit: the best way to start you AI project"
                 disabled={!ctx.state.sessionUser}
               />
             </div>

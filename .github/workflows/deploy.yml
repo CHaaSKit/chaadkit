@@ -32,5 +32,3 @@ jobs:
           project: "chaadkit"
           entrypoint: "main.ts"
           root: "."
-          
-          

@@ -1,4 +1,4 @@
-# CHaaSKit: Deno Fresh
+# CHaaDKit: A SaaSKit for realtime AI chat apps with Deno and Cloudflare.
 
 > [!WARNING]\
 > this project is in ALPHA. Everything is broken and everything might change!
